@@ -1,0 +1,2717 @@
+{
+  "generatedAt": "2026-09-29T15:05:54.270Z",
+  "totalMinigames": 30,
+  "totalScenarios": 9000,
+  "features": [
+    {
+      "id": "phone",
+      "uniqueInteractionType": "telephony-routing",
+      "primaryUIComponent": "CallConsole",
+      "actionTypes": [
+        "answer",
+        "ask-name",
+        "ask-account",
+        "ask-order",
+        "ask-callback",
+        "hold",
+        "resume",
+        "open-record",
+        "open-invoice",
+        "transfer",
+        "escalate",
+        "callback",
+        "take-message",
+        "verify-security",
+        "resolve",
+        "end-call"
+      ],
+      "stateMachineType": "line-and-caller-authentication",
+      "scenarioFamilies": [
+        {
+          "id": "phone-family-0",
+          "name": "Angry complaint",
+          "requiredAction": "escalate",
+          "objective": "Angry complaint: complete the escalate control before closing this work."
+        },
+        {
+          "id": "phone-family-1",
+          "name": "Vendor delay",
+          "requiredAction": "callback",
+          "objective": "Vendor delay: complete the callback control before closing this work."
+        },
+        {
+          "id": "phone-family-2",
+          "name": "Urgent internal request",
+          "requiredAction": "transfer",
+          "objective": "Urgent internal request: complete the transfer control before closing this work."
+        },
+        {
+          "id": "phone-family-3",
+          "name": "Wrong department",
+          "requiredAction": "transfer",
+          "objective": "Wrong department: complete the transfer control before closing this work."
+        },
+        {
+          "id": "phone-family-4",
+          "name": "Billing dispute",
+          "requiredAction": "open-invoice",
+          "objective": "Billing dispute: complete the open invoice control before closing this work."
+        },
+        {
+          "id": "phone-family-5",
+          "name": "Account verification",
+          "requiredAction": "verify-security",
+          "objective": "Account verification: complete the verify security control before closing this work."
+        },
+        {
+          "id": "phone-family-6",
+          "name": "Prospective customer",
+          "requiredAction": "take-message",
+          "objective": "Prospective customer: complete the take message control before closing this work."
+        },
+        {
+          "id": "phone-family-7",
+          "name": "Executive callback",
+          "requiredAction": "callback",
+          "objective": "Executive callback: complete the callback control before closing this work."
+        },
+        {
+          "id": "phone-family-8",
+          "name": "Employee absence",
+          "requiredAction": "take-message",
+          "objective": "Employee absence: complete the take message control before closing this work."
+        },
+        {
+          "id": "phone-family-9",
+          "name": "Confidential request",
+          "requiredAction": "verify-security",
+          "objective": "Confidential request: complete the verify security control before closing this work."
+        },
+        {
+          "id": "phone-family-10",
+          "name": "Suspicious caller",
+          "requiredAction": "verify-security",
+          "objective": "Suspicious caller: complete the verify security control before closing this work."
+        },
+        {
+          "id": "phone-family-11",
+          "name": "Technical outage",
+          "requiredAction": "escalate",
+          "objective": "Technical outage: complete the escalate control before closing this work."
+        },
+        {
+          "id": "phone-family-12",
+          "name": "Scheduling request",
+          "requiredAction": "callback",
+          "objective": "Scheduling request: complete the callback control before closing this work."
+        },
+        {
+          "id": "phone-family-13",
+          "name": "Supplier pricing",
+          "requiredAction": "open-record",
+          "objective": "Supplier pricing: complete the open record control before closing this work."
+        },
+        {
+          "id": "phone-family-14",
+          "name": "Cancellation",
+          "requiredAction": "resolve",
+          "objective": "Cancellation: complete the resolve control before closing this work."
+        },
+        {
+          "id": "phone-family-15",
+          "name": "Supervisor complaint",
+          "requiredAction": "escalate",
+          "objective": "Supervisor complaint: complete the escalate control before closing this work."
+        },
+        {
+          "id": "phone-family-16",
+          "name": "Incomplete order",
+          "requiredAction": "ask-order",
+          "objective": "Incomplete order: complete the ask order control before closing this work."
+        },
+        {
+          "id": "phone-family-17",
+          "name": "Disconnected line",
+          "requiredAction": "ask-callback",
+          "objective": "Disconnected line: complete the ask callback control before closing this work."
+        },
+        {
+          "id": "phone-family-18",
+          "name": "Voicemail triage",
+          "requiredAction": "take-message",
+          "objective": "Voicemail triage: complete the take message control before closing this work."
+        },
+        {
+          "id": "phone-family-19",
+          "name": "Concurrent calls",
+          "requiredAction": "hold",
+          "objective": "Concurrent calls: complete the hold control before closing this work."
+        }
+      ],
+      "evaluatorType": "phone-evidence-and-state-validator",
+      "finishAction": "end-call",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "answer",
+        "ask-name",
+        "ask-account",
+        "verify-security",
+        "hold",
+        "resume",
+        "open-record",
+        "open-invoice",
+        "transfer",
+        "ask-callback",
+        "callback",
+        "end-call"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "email",
+      "uniqueInteractionType": "message-disposition-and-threading",
+      "primaryUIComponent": "EmailClient",
+      "actionTypes": [
+        "open-message",
+        "reply",
+        "reply-all",
+        "forward",
+        "attach",
+        "clarify",
+        "approve",
+        "reject",
+        "escalate-mail",
+        "add-task",
+        "follow-up",
+        "send-mail",
+        "archive-thread",
+        "write-mail",
+        "flag-mail"
+      ],
+      "stateMachineType": "mail-thread-lifecycle",
+      "scenarioFamilies": [
+        {
+          "id": "email-family-0",
+          "name": "Invoice approval",
+          "requiredAction": "approve",
+          "objective": "Invoice approval: complete the approve control before closing this work."
+        },
+        {
+          "id": "email-family-1",
+          "name": "Missing attachment",
+          "requiredAction": "clarify",
+          "objective": "Missing attachment: complete the clarify control before closing this work."
+        },
+        {
+          "id": "email-family-2",
+          "name": "Customer escalation",
+          "requiredAction": "escalate-mail",
+          "objective": "Customer escalation: complete the escalate mail control before closing this work."
+        },
+        {
+          "id": "email-family-3",
+          "name": "Team announcement",
+          "requiredAction": "reply-all",
+          "objective": "Team announcement: complete the reply all control before closing this work."
+        },
+        {
+          "id": "email-family-4",
+          "name": "Research request",
+          "requiredAction": "attach",
+          "objective": "Research request: complete the attach control before closing this work."
+        },
+        {
+          "id": "email-family-5",
+          "name": "Misrouted request",
+          "requiredAction": "forward",
+          "objective": "Misrouted request: complete the forward control before closing this work."
+        },
+        {
+          "id": "email-family-6",
+          "name": "Project commitment",
+          "requiredAction": "add-task",
+          "objective": "Project commitment: complete the add task control before closing this work."
+        },
+        {
+          "id": "email-family-7",
+          "name": "Renewal reminder",
+          "requiredAction": "follow-up",
+          "objective": "Renewal reminder: complete the follow up control before closing this work."
+        }
+      ],
+      "evaluatorType": "email-evidence-and-state-validator",
+      "finishAction": "archive-thread",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "open-message",
+        "reply",
+        "clarify",
+        "attach",
+        "add-task",
+        "follow-up",
+        "send-mail",
+        "archive-thread"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "meetings",
+      "uniqueInteractionType": "speaker-turns-and-motion-voting",
+      "primaryUIComponent": "MeetingRoom",
+      "actionTypes": [
+        "join",
+        "ask-evidence",
+        "clarify-motion",
+        "agree",
+        "disagree",
+        "raise-risk",
+        "volunteer",
+        "suggest-deadline",
+        "defer",
+        "add-action",
+        "next-agenda",
+        "adjourn",
+        "write-minutes",
+        "assign-action-owner"
+      ],
+      "stateMachineType": "agenda-quorum-decisions",
+      "scenarioFamilies": [
+        {
+          "id": "meetings-family-0",
+          "name": "Budget committee",
+          "requiredAction": "ask-evidence",
+          "objective": "Budget committee: complete the ask evidence control before closing this work."
+        },
+        {
+          "id": "meetings-family-1",
+          "name": "Risk review",
+          "requiredAction": "raise-risk",
+          "objective": "Risk review: complete the raise risk control before closing this work."
+        },
+        {
+          "id": "meetings-family-2",
+          "name": "Project kickoff",
+          "requiredAction": "volunteer",
+          "objective": "Project kickoff: complete the volunteer control before closing this work."
+        },
+        {
+          "id": "meetings-family-3",
+          "name": "Deadline negotiation",
+          "requiredAction": "suggest-deadline",
+          "objective": "Deadline negotiation: complete the suggest deadline control before closing this work."
+        },
+        {
+          "id": "meetings-family-4",
+          "name": "Disputed forecast",
+          "requiredAction": "disagree",
+          "objective": "Disputed forecast: complete the disagree control before closing this work."
+        },
+        {
+          "id": "meetings-family-5",
+          "name": "Missing quorum",
+          "requiredAction": "defer",
+          "objective": "Missing quorum: complete the defer control before closing this work."
+        },
+        {
+          "id": "meetings-family-6",
+          "name": "Requirements workshop",
+          "requiredAction": "clarify-motion",
+          "objective": "Requirements workshop: complete the clarify motion control before closing this work."
+        },
+        {
+          "id": "meetings-family-7",
+          "name": "Action review",
+          "requiredAction": "add-action",
+          "objective": "Action review: complete the add action control before closing this work."
+        }
+      ],
+      "evaluatorType": "meetings-evidence-and-state-validator",
+      "finishAction": "adjourn",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "join",
+        "ask-evidence",
+        "volunteer",
+        "suggest-deadline",
+        "add-action",
+        "agree",
+        "next-agenda",
+        "raise-risk",
+        "adjourn"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "economics",
+      "uniqueInteractionType": "price-demand-experiment",
+      "primaryUIComponent": "MarketLab",
+      "actionTypes": [
+        "set-price",
+        "set-volume",
+        "simulate-market",
+        "compare-baseline",
+        "apply-inflation",
+        "test-elasticity",
+        "capacity-limit",
+        "competitor-check",
+        "publish-price"
+      ],
+      "stateMachineType": "market-experiment-portfolio",
+      "scenarioFamilies": [
+        {
+          "id": "economics-family-0",
+          "name": "Inflation shock",
+          "requiredAction": "apply-inflation",
+          "objective": "Inflation shock: complete the apply inflation control before closing this work."
+        },
+        {
+          "id": "economics-family-1",
+          "name": "Elastic demand",
+          "requiredAction": "test-elasticity",
+          "objective": "Elastic demand: complete the test elasticity control before closing this work."
+        },
+        {
+          "id": "economics-family-2",
+          "name": "New competitor",
+          "requiredAction": "competitor-check",
+          "objective": "New competitor: complete the competitor check control before closing this work."
+        },
+        {
+          "id": "economics-family-3",
+          "name": "Capacity ceiling",
+          "requiredAction": "capacity-limit",
+          "objective": "Capacity ceiling: complete the capacity limit control before closing this work."
+        },
+        {
+          "id": "economics-family-4",
+          "name": "Price promotion",
+          "requiredAction": "compare-baseline",
+          "objective": "Price promotion: complete the compare baseline control before closing this work."
+        },
+        {
+          "id": "economics-family-5",
+          "name": "Demand contraction",
+          "requiredAction": "test-elasticity",
+          "objective": "Demand contraction: complete the test elasticity control before closing this work."
+        },
+        {
+          "id": "economics-family-6",
+          "name": "Supplier cost rise",
+          "requiredAction": "apply-inflation",
+          "objective": "Supplier cost rise: complete the apply inflation control before closing this work."
+        },
+        {
+          "id": "economics-family-7",
+          "name": "Productivity investment",
+          "requiredAction": "capacity-limit",
+          "objective": "Productivity investment: complete the capacity limit control before closing this work."
+        }
+      ],
+      "evaluatorType": "economics-evidence-and-state-validator",
+      "finishAction": "publish-price",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "compare-baseline",
+        "simulate-market",
+        "set-price",
+        "publish-price"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "finance",
+      "uniqueInteractionType": "invoice-three-way-approval",
+      "primaryUIComponent": "FinanceDesk",
+      "actionTypes": [
+        "select-invoice",
+        "match-po",
+        "recalculate",
+        "request-documents",
+        "cost-center",
+        "flag-variance",
+        "hold-payment",
+        "approve-payment",
+        "escalate-variance",
+        "post-payment"
+      ],
+      "stateMachineType": "payment-control-gates",
+      "scenarioFamilies": [
+        {
+          "id": "finance-family-0",
+          "name": "Missing receipt",
+          "requiredAction": "request-documents",
+          "objective": "Missing receipt: complete the request documents control before closing this work."
+        },
+        {
+          "id": "finance-family-1",
+          "name": "Overbilled quantity",
+          "requiredAction": "flag-variance",
+          "objective": "Overbilled quantity: complete the flag variance control before closing this work."
+        },
+        {
+          "id": "finance-family-2",
+          "name": "Budget freeze",
+          "requiredAction": "hold-payment",
+          "objective": "Budget freeze: complete the hold payment control before closing this work."
+        },
+        {
+          "id": "finance-family-3",
+          "name": "Wrong cost center",
+          "requiredAction": "cost-center",
+          "objective": "Wrong cost center: complete the cost center control before closing this work."
+        },
+        {
+          "id": "finance-family-4",
+          "name": "Price mismatch",
+          "requiredAction": "recalculate",
+          "objective": "Price mismatch: complete the recalculate control before closing this work."
+        },
+        {
+          "id": "finance-family-5",
+          "name": "Large payment",
+          "requiredAction": "escalate-variance",
+          "objective": "Large payment: complete the escalate variance control before closing this work."
+        },
+        {
+          "id": "finance-family-6",
+          "name": "Receipt matching",
+          "requiredAction": "match-po",
+          "objective": "Receipt matching: complete the match po control before closing this work."
+        },
+        {
+          "id": "finance-family-7",
+          "name": "Duplicate invoice",
+          "requiredAction": "hold-payment",
+          "objective": "Duplicate invoice: complete the hold payment control before closing this work."
+        }
+      ],
+      "evaluatorType": "finance-evidence-and-state-validator",
+      "finishAction": "post-payment",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "select-invoice",
+        "match-po",
+        "request-documents",
+        "cost-center",
+        "hold-payment",
+        "post-payment"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "accounting",
+      "uniqueInteractionType": "double-entry-and-bank-reconciliation",
+      "primaryUIComponent": "LedgerWorkbench",
+      "actionTypes": [
+        "select-transaction",
+        "set-debit",
+        "set-credit",
+        "set-amount",
+        "post-journal",
+        "mark-duplicate",
+        "reclassify",
+        "request-correction",
+        "investigate",
+        "match-bank",
+        "close-ledger"
+      ],
+      "stateMachineType": "journal-posting-reconciliation",
+      "scenarioFamilies": [
+        {
+          "id": "accounting-family-0",
+          "name": "Credit sale",
+          "requiredAction": "post-journal",
+          "objective": "Credit sale: complete the post journal control before closing this work."
+        },
+        {
+          "id": "accounting-family-1",
+          "name": "Supplier accrual",
+          "requiredAction": "reclassify",
+          "objective": "Supplier accrual: complete the reclassify control before closing this work."
+        },
+        {
+          "id": "accounting-family-2",
+          "name": "Duplicate payment",
+          "requiredAction": "mark-duplicate",
+          "objective": "Duplicate payment: complete the mark duplicate control before closing this work."
+        },
+        {
+          "id": "accounting-family-3",
+          "name": "Bank fee",
+          "requiredAction": "investigate",
+          "objective": "Bank fee: complete the investigate control before closing this work."
+        },
+        {
+          "id": "accounting-family-4",
+          "name": "Missing remittance",
+          "requiredAction": "request-correction",
+          "objective": "Missing remittance: complete the request correction control before closing this work."
+        },
+        {
+          "id": "accounting-family-5",
+          "name": "Cash receipt",
+          "requiredAction": "match-bank",
+          "objective": "Cash receipt: complete the match bank control before closing this work."
+        },
+        {
+          "id": "accounting-family-6",
+          "name": "Expense miscode",
+          "requiredAction": "reclassify",
+          "objective": "Expense miscode: complete the reclassify control before closing this work."
+        },
+        {
+          "id": "accounting-family-7",
+          "name": "Unmatched deposit",
+          "requiredAction": "investigate",
+          "objective": "Unmatched deposit: complete the investigate control before closing this work."
+        }
+      ],
+      "evaluatorType": "accounting-evidence-and-state-validator",
+      "finishAction": "close-ledger",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "select-transaction",
+        "set-debit",
+        "set-credit",
+        "set-amount",
+        "post-journal",
+        "match-bank",
+        "close-ledger"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "research",
+      "uniqueInteractionType": "source-provenance-and-claim-triangulation",
+      "primaryUIComponent": "EvidenceLibrary",
+      "actionTypes": [
+        "inspect-source",
+        "collect-source",
+        "exclude-source",
+        "compare-sources",
+        "check-date",
+        "trace-origin",
+        "select-finding",
+        "publish-finding"
+      ],
+      "stateMachineType": "evidence-collection-synthesis",
+      "scenarioFamilies": [
+        {
+          "id": "research-family-0",
+          "name": "Superseded price",
+          "requiredAction": "check-date",
+          "objective": "Superseded price: complete the check date control before closing this work."
+        },
+        {
+          "id": "research-family-1",
+          "name": "Conflicting delivery",
+          "requiredAction": "compare-sources",
+          "objective": "Conflicting delivery: complete the compare sources control before closing this work."
+        },
+        {
+          "id": "research-family-2",
+          "name": "Unsupported claim",
+          "requiredAction": "trace-origin",
+          "objective": "Unsupported claim: complete the trace origin control before closing this work."
+        },
+        {
+          "id": "research-family-3",
+          "name": "Vendor due diligence",
+          "requiredAction": "inspect-source",
+          "objective": "Vendor due diligence: complete the inspect source control before closing this work."
+        },
+        {
+          "id": "research-family-4",
+          "name": "Policy interpretation",
+          "requiredAction": "collect-source",
+          "objective": "Policy interpretation: complete the collect source control before closing this work."
+        },
+        {
+          "id": "research-family-5",
+          "name": "Market briefing",
+          "requiredAction": "compare-sources",
+          "objective": "Market briefing: complete the compare sources control before closing this work."
+        },
+        {
+          "id": "research-family-6",
+          "name": "Outdated forecast",
+          "requiredAction": "exclude-source",
+          "objective": "Outdated forecast: complete the exclude source control before closing this work."
+        },
+        {
+          "id": "research-family-7",
+          "name": "Source provenance",
+          "requiredAction": "trace-origin",
+          "objective": "Source provenance: complete the trace origin control before closing this work."
+        }
+      ],
+      "evaluatorType": "research-evidence-and-state-validator",
+      "finishAction": "publish-finding",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "inspect-source",
+        "collect-source",
+        "compare-sources",
+        "select-finding",
+        "publish-finding"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "data-analysis",
+      "uniqueInteractionType": "filter-aggregate-chart-anomaly",
+      "primaryUIComponent": "AnalyticsStudio",
+      "actionTypes": [
+        "filter-department",
+        "sort-column",
+        "select-metric",
+        "build-chart",
+        "flag-outlier",
+        "compare-target",
+        "exclude-duplicate",
+        "segment-data",
+        "publish-analysis"
+      ],
+      "stateMachineType": "dataset-investigation-pipeline",
+      "scenarioFamilies": [
+        {
+          "id": "data-analysis-family-0",
+          "name": "Output anomaly",
+          "requiredAction": "flag-outlier",
+          "objective": "Output anomaly: complete the flag outlier control before closing this work."
+        },
+        {
+          "id": "data-analysis-family-1",
+          "name": "Department comparison",
+          "requiredAction": "segment-data",
+          "objective": "Department comparison: complete the segment data control before closing this work."
+        },
+        {
+          "id": "data-analysis-family-2",
+          "name": "Target variance",
+          "requiredAction": "compare-target",
+          "objective": "Target variance: complete the compare target control before closing this work."
+        },
+        {
+          "id": "data-analysis-family-3",
+          "name": "Duplicate import",
+          "requiredAction": "exclude-duplicate",
+          "objective": "Duplicate import: complete the exclude duplicate control before closing this work."
+        },
+        {
+          "id": "data-analysis-family-4",
+          "name": "Revenue mix",
+          "requiredAction": "select-metric",
+          "objective": "Revenue mix: complete the select metric control before closing this work."
+        },
+        {
+          "id": "data-analysis-family-5",
+          "name": "Missing segment",
+          "requiredAction": "filter-department",
+          "objective": "Missing segment: complete the filter department control before closing this work."
+        },
+        {
+          "id": "data-analysis-family-6",
+          "name": "Trend briefing",
+          "requiredAction": "build-chart",
+          "objective": "Trend briefing: complete the build chart control before closing this work."
+        },
+        {
+          "id": "data-analysis-family-7",
+          "name": "Largest contributor",
+          "requiredAction": "sort-column",
+          "objective": "Largest contributor: complete the sort column control before closing this work."
+        }
+      ],
+      "evaluatorType": "data-analysis-evidence-and-state-validator",
+      "finishAction": "publish-analysis",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "select-metric",
+        "filter-department",
+        "sort-column",
+        "build-chart",
+        "flag-outlier",
+        "compare-target",
+        "publish-analysis"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "spreadsheet",
+      "uniqueInteractionType": "cell-formula-range-editing",
+      "primaryUIComponent": "SpreadsheetLab",
+      "actionTypes": [
+        "edit-grid",
+        "insert-row",
+        "sort-sheet",
+        "filter-sheet",
+        "format-percent",
+        "audit-formula",
+        "recalculate-sheet",
+        "deliver-workbook"
+      ],
+      "stateMachineType": "worksheet-calculation-validation",
+      "scenarioFamilies": [
+        {
+          "id": "spreadsheet-family-0",
+          "name": "Revenue sum",
+          "requiredAction": "recalculate-sheet",
+          "objective": "Revenue sum: complete the recalculate sheet control before closing this work."
+        },
+        {
+          "id": "spreadsheet-family-1",
+          "name": "Average ticket",
+          "requiredAction": "audit-formula",
+          "objective": "Average ticket: complete the audit formula control before closing this work."
+        },
+        {
+          "id": "spreadsheet-family-2",
+          "name": "Minimum quote",
+          "requiredAction": "sort-sheet",
+          "objective": "Minimum quote: complete the sort sheet control before closing this work."
+        },
+        {
+          "id": "spreadsheet-family-3",
+          "name": "Maximum exposure",
+          "requiredAction": "filter-sheet",
+          "objective": "Maximum exposure: complete the filter sheet control before closing this work."
+        },
+        {
+          "id": "spreadsheet-family-4",
+          "name": "Percentage margin",
+          "requiredAction": "format-percent",
+          "objective": "Percentage margin: complete the format percent control before closing this work."
+        },
+        {
+          "id": "spreadsheet-family-5",
+          "name": "Expense rollup",
+          "requiredAction": "insert-row",
+          "objective": "Expense rollup: complete the insert row control before closing this work."
+        },
+        {
+          "id": "spreadsheet-family-6",
+          "name": "Broken reference",
+          "requiredAction": "audit-formula",
+          "objective": "Broken reference: complete the audit formula control before closing this work."
+        },
+        {
+          "id": "spreadsheet-family-7",
+          "name": "Forecast workbook",
+          "requiredAction": "recalculate-sheet",
+          "objective": "Forecast workbook: complete the recalculate sheet control before closing this work."
+        }
+      ],
+      "evaluatorType": "spreadsheet-evidence-and-state-validator",
+      "finishAction": "deliver-workbook",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "edit-grid",
+        "audit-formula",
+        "recalculate-sheet",
+        "deliver-workbook"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "documents",
+      "uniqueInteractionType": "section-assembly-and-document-control",
+      "primaryUIComponent": "DocumentComposer",
+      "actionTypes": [
+        "add-section",
+        "move-section",
+        "insert-reference",
+        "choose-audience",
+        "set-classification",
+        "review-document",
+        "sign-document",
+        "issue-document",
+        "edit-section",
+        "format-section",
+        "save-version"
+      ],
+      "stateMachineType": "document-version-approval",
+      "scenarioFamilies": [
+        {
+          "id": "documents-family-0",
+          "name": "Policy notice",
+          "requiredAction": "set-classification",
+          "objective": "Policy notice: complete the set classification control before closing this work."
+        },
+        {
+          "id": "documents-family-1",
+          "name": "Executive memo",
+          "requiredAction": "choose-audience",
+          "objective": "Executive memo: complete the choose audience control before closing this work."
+        },
+        {
+          "id": "documents-family-2",
+          "name": "Customer letter",
+          "requiredAction": "insert-reference",
+          "objective": "Customer letter: complete the insert reference control before closing this work."
+        },
+        {
+          "id": "documents-family-3",
+          "name": "Operating procedure",
+          "requiredAction": "move-section",
+          "objective": "Operating procedure: complete the move section control before closing this work."
+        },
+        {
+          "id": "documents-family-4",
+          "name": "Project brief",
+          "requiredAction": "add-section",
+          "objective": "Project brief: complete the add section control before closing this work."
+        },
+        {
+          "id": "documents-family-5",
+          "name": "Approval memo",
+          "requiredAction": "sign-document",
+          "objective": "Approval memo: complete the sign document control before closing this work."
+        },
+        {
+          "id": "documents-family-6",
+          "name": "Internal announcement",
+          "requiredAction": "review-document",
+          "objective": "Internal announcement: complete the review document control before closing this work."
+        },
+        {
+          "id": "documents-family-7",
+          "name": "Controlled revision",
+          "requiredAction": "set-classification",
+          "objective": "Controlled revision: complete the set classification control before closing this work."
+        }
+      ],
+      "evaluatorType": "documents-evidence-and-state-validator",
+      "finishAction": "issue-document",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "add-section",
+        "insert-reference",
+        "choose-audience",
+        "set-classification",
+        "edit-section",
+        "save-version",
+        "review-document",
+        "issue-document"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "scheduling",
+      "uniqueInteractionType": "time-slot-reservation-and-conflict-repair",
+      "primaryUIComponent": "CalendarPlanner",
+      "actionTypes": [
+        "select-slot",
+        "select-attendee",
+        "book-room",
+        "check-conflicts",
+        "reschedule-event",
+        "cancel-event",
+        "hold-slot",
+        "send-invites"
+      ],
+      "stateMachineType": "availability-booking-transaction",
+      "scenarioFamilies": [
+        {
+          "id": "scheduling-family-0",
+          "name": "Double booking",
+          "requiredAction": "reschedule-event",
+          "objective": "Double booking: complete the reschedule event control before closing this work."
+        },
+        {
+          "id": "scheduling-family-1",
+          "name": "Room unavailable",
+          "requiredAction": "book-room",
+          "objective": "Room unavailable: complete the book room control before closing this work."
+        },
+        {
+          "id": "scheduling-family-2",
+          "name": "Remote participants",
+          "requiredAction": "select-attendee",
+          "objective": "Remote participants: complete the select attendee control before closing this work."
+        },
+        {
+          "id": "scheduling-family-3",
+          "name": "Urgent review",
+          "requiredAction": "hold-slot",
+          "objective": "Urgent review: complete the hold slot control before closing this work."
+        },
+        {
+          "id": "scheduling-family-4",
+          "name": "Cancelled delivery",
+          "requiredAction": "cancel-event",
+          "objective": "Cancelled delivery: complete the cancel event control before closing this work."
+        },
+        {
+          "id": "scheduling-family-5",
+          "name": "Executive availability",
+          "requiredAction": "select-slot",
+          "objective": "Executive availability: complete the select slot control before closing this work."
+        },
+        {
+          "id": "scheduling-family-6",
+          "name": "Cross-team workshop",
+          "requiredAction": "check-conflicts",
+          "objective": "Cross-team workshop: complete the check conflicts control before closing this work."
+        },
+        {
+          "id": "scheduling-family-7",
+          "name": "Recurring review",
+          "requiredAction": "hold-slot",
+          "objective": "Recurring review: complete the hold slot control before closing this work."
+        }
+      ],
+      "evaluatorType": "scheduling-evidence-and-state-validator",
+      "finishAction": "send-invites",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "select-attendee",
+        "book-room",
+        "cancel-event",
+        "select-slot",
+        "check-conflicts",
+        "send-invites"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "customer-service",
+      "uniqueInteractionType": "evidence-remedy-and-customer-sentiment",
+      "primaryUIComponent": "ServiceCaseDesk",
+      "actionTypes": [
+        "open-case",
+        "verify-customer",
+        "request-proof",
+        "clarify-case",
+        "refund",
+        "partial-refund",
+        "replacement",
+        "escalate-case",
+        "schedule-callback",
+        "confirm-remedy",
+        "close-case"
+      ],
+      "stateMachineType": "case-investigation-resolution",
+      "scenarioFamilies": [
+        {
+          "id": "customer-service-family-0",
+          "name": "Damaged order",
+          "requiredAction": "replacement",
+          "objective": "Damaged order: complete the replacement control before closing this work."
+        },
+        {
+          "id": "customer-service-family-1",
+          "name": "Refund over limit",
+          "requiredAction": "escalate-case",
+          "objective": "Refund over limit: complete the escalate case control before closing this work."
+        },
+        {
+          "id": "customer-service-family-2",
+          "name": "Partial delivery",
+          "requiredAction": "partial-refund",
+          "objective": "Partial delivery: complete the partial refund control before closing this work."
+        },
+        {
+          "id": "customer-service-family-3",
+          "name": "Unknown purchase",
+          "requiredAction": "request-proof",
+          "objective": "Unknown purchase: complete the request proof control before closing this work."
+        },
+        {
+          "id": "customer-service-family-4",
+          "name": "Late shipment",
+          "requiredAction": "schedule-callback",
+          "objective": "Late shipment: complete the schedule callback control before closing this work."
+        },
+        {
+          "id": "customer-service-family-5",
+          "name": "Billing confusion",
+          "requiredAction": "clarify-case",
+          "objective": "Billing confusion: complete the clarify case control before closing this work."
+        },
+        {
+          "id": "customer-service-family-6",
+          "name": "Duplicate charge",
+          "requiredAction": "refund",
+          "objective": "Duplicate charge: complete the refund control before closing this work."
+        },
+        {
+          "id": "customer-service-family-7",
+          "name": "Angry customer",
+          "requiredAction": "escalate-case",
+          "objective": "Angry customer: complete the escalate case control before closing this work."
+        }
+      ],
+      "evaluatorType": "customer-service-evidence-and-state-validator",
+      "finishAction": "close-case",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "open-case",
+        "verify-customer",
+        "request-proof",
+        "replacement",
+        "confirm-remedy",
+        "close-case"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "procurement",
+      "uniqueInteractionType": "quote-auction-and-purchase-authorization",
+      "primaryUIComponent": "SourcingDesk",
+      "actionTypes": [
+        "inspect-quote",
+        "compare-cost",
+        "compare-delivery",
+        "reject-quote",
+        "revise-quote",
+        "select-vendor",
+        "split-order",
+        "request-approval",
+        "cancel-purchase",
+        "issue-order",
+        "select-secondary",
+        "allocate-order"
+      ],
+      "stateMachineType": "quote-shortlist-approval-order",
+      "scenarioFamilies": [
+        {
+          "id": "procurement-family-0",
+          "name": "Late supplier",
+          "requiredAction": "compare-delivery",
+          "objective": "Late supplier: complete the compare delivery control before closing this work."
+        },
+        {
+          "id": "procurement-family-1",
+          "name": "Overbudget offer",
+          "requiredAction": "revise-quote",
+          "objective": "Overbudget offer: complete the revise quote control before closing this work."
+        },
+        {
+          "id": "procurement-family-2",
+          "name": "Poor quality",
+          "requiredAction": "reject-quote",
+          "objective": "Poor quality: complete the reject quote control before closing this work."
+        },
+        {
+          "id": "procurement-family-3",
+          "name": "Urgent split delivery",
+          "requiredAction": "split-order",
+          "objective": "Urgent split delivery: complete the split order control before closing this work."
+        },
+        {
+          "id": "procurement-family-4",
+          "name": "High-value purchase",
+          "requiredAction": "request-approval",
+          "objective": "High-value purchase: complete the request approval control before closing this work."
+        },
+        {
+          "id": "procurement-family-5",
+          "name": "Price competition",
+          "requiredAction": "compare-cost",
+          "objective": "Price competition: complete the compare cost control before closing this work."
+        },
+        {
+          "id": "procurement-family-6",
+          "name": "Single source",
+          "requiredAction": "inspect-quote",
+          "objective": "Single source: complete the inspect quote control before closing this work."
+        },
+        {
+          "id": "procurement-family-7",
+          "name": "Requisition withdrawn",
+          "requiredAction": "cancel-purchase",
+          "objective": "Requisition withdrawn: complete the cancel purchase control before closing this work."
+        }
+      ],
+      "evaluatorType": "procurement-evidence-and-state-validator",
+      "finishAction": "issue-order",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "inspect-quote",
+        "compare-cost",
+        "compare-delivery",
+        "select-vendor",
+        "request-approval",
+        "issue-order"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "inventory",
+      "uniqueInteractionType": "physical-stock-movement-reconciliation",
+      "primaryUIComponent": "StockControl",
+      "actionTypes": [
+        "count-stock",
+        "receive-stock",
+        "use-stock",
+        "mark-damaged",
+        "transfer-stock",
+        "investigate-stock",
+        "adjust-stock",
+        "reorder-stock",
+        "close-count"
+      ],
+      "stateMachineType": "warehouse-count-movements",
+      "scenarioFamilies": [
+        {
+          "id": "inventory-family-0",
+          "name": "Damaged receipt",
+          "requiredAction": "mark-damaged",
+          "objective": "Damaged receipt: complete the mark damaged control before closing this work."
+        },
+        {
+          "id": "inventory-family-1",
+          "name": "Unrecorded receipt",
+          "requiredAction": "receive-stock",
+          "objective": "Unrecorded receipt: complete the receive stock control before closing this work."
+        },
+        {
+          "id": "inventory-family-2",
+          "name": "Shortage",
+          "requiredAction": "reorder-stock",
+          "objective": "Shortage: complete the reorder stock control before closing this work."
+        },
+        {
+          "id": "inventory-family-3",
+          "name": "Bin mismatch",
+          "requiredAction": "transfer-stock",
+          "objective": "Bin mismatch: complete the transfer stock control before closing this work."
+        },
+        {
+          "id": "inventory-family-4",
+          "name": "Count discrepancy",
+          "requiredAction": "investigate-stock",
+          "objective": "Count discrepancy: complete the investigate stock control before closing this work."
+        },
+        {
+          "id": "inventory-family-5",
+          "name": "Department usage",
+          "requiredAction": "use-stock",
+          "objective": "Department usage: complete the use stock control before closing this work."
+        },
+        {
+          "id": "inventory-family-6",
+          "name": "Opening balance error",
+          "requiredAction": "adjust-stock",
+          "objective": "Opening balance error: complete the adjust stock control before closing this work."
+        },
+        {
+          "id": "inventory-family-7",
+          "name": "Reorder review",
+          "requiredAction": "count-stock",
+          "objective": "Reorder review: complete the count stock control before closing this work."
+        }
+      ],
+      "evaluatorType": "inventory-evidence-and-state-validator",
+      "finishAction": "close-count",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "receive-stock",
+        "mark-damaged",
+        "transfer-stock",
+        "count-stock",
+        "investigate-stock",
+        "adjust-stock",
+        "reorder-stock",
+        "close-count"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "hr",
+      "uniqueInteractionType": "employee-record-access-and-leave-policy",
+      "primaryUIComponent": "PeopleDesk",
+      "actionTypes": [
+        "open-personnel",
+        "verify-identity",
+        "check-balance",
+        "approve-leave",
+        "decline-leave",
+        "verify-form",
+        "assign-training",
+        "approve-access",
+        "manager-approval",
+        "file-hr-record",
+        "schedule-training"
+      ],
+      "stateMachineType": "personnel-request-authorization",
+      "scenarioFamilies": [
+        {
+          "id": "hr-family-0",
+          "name": "Leave within balance",
+          "requiredAction": "approve-leave",
+          "objective": "Leave within balance: complete the approve leave control before closing this work."
+        },
+        {
+          "id": "hr-family-1",
+          "name": "Insufficient leave",
+          "requiredAction": "decline-leave",
+          "objective": "Insufficient leave: complete the decline leave control before closing this work."
+        },
+        {
+          "id": "hr-family-2",
+          "name": "New starter",
+          "requiredAction": "verify-form",
+          "objective": "New starter: complete the verify form control before closing this work."
+        },
+        {
+          "id": "hr-family-3",
+          "name": "Training expiry",
+          "requiredAction": "assign-training",
+          "objective": "Training expiry: complete the assign training control before closing this work."
+        },
+        {
+          "id": "hr-family-4",
+          "name": "Access request",
+          "requiredAction": "approve-access",
+          "objective": "Access request: complete the approve access control before closing this work."
+        },
+        {
+          "id": "hr-family-5",
+          "name": "Identity mismatch",
+          "requiredAction": "verify-identity",
+          "objective": "Identity mismatch: complete the verify identity control before closing this work."
+        },
+        {
+          "id": "hr-family-6",
+          "name": "Leave audit",
+          "requiredAction": "check-balance",
+          "objective": "Leave audit: complete the check balance control before closing this work."
+        },
+        {
+          "id": "hr-family-7",
+          "name": "Manager delegation",
+          "requiredAction": "manager-approval",
+          "objective": "Manager delegation: complete the manager approval control before closing this work."
+        }
+      ],
+      "evaluatorType": "hr-evidence-and-state-validator",
+      "finishAction": "file-hr-record",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "open-personnel",
+        "verify-identity",
+        "verify-form",
+        "check-balance",
+        "decline-leave",
+        "assign-training",
+        "manager-approval",
+        "file-hr-record"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "project-management",
+      "uniqueInteractionType": "kanban-dependency-and-resource-management",
+      "primaryUIComponent": "DeliveryBoard",
+      "actionTypes": [
+        "assign-task",
+        "move-task",
+        "change-deadline",
+        "add-dependency",
+        "escalate-blocker",
+        "reallocate-resource",
+        "complete-task",
+        "release-milestone",
+        "set-task-priority"
+      ],
+      "stateMachineType": "dependency-graph-delivery",
+      "scenarioFamilies": [
+        {
+          "id": "project-management-family-0",
+          "name": "Blocked dependency",
+          "requiredAction": "escalate-blocker",
+          "objective": "Blocked dependency: complete the escalate blocker control before closing this work."
+        },
+        {
+          "id": "project-management-family-1",
+          "name": "Resource absence",
+          "requiredAction": "reallocate-resource",
+          "objective": "Resource absence: complete the reallocate resource control before closing this work."
+        },
+        {
+          "id": "project-management-family-2",
+          "name": "Scope change",
+          "requiredAction": "add-dependency",
+          "objective": "Scope change: complete the add dependency control before closing this work."
+        },
+        {
+          "id": "project-management-family-3",
+          "name": "Missed milestone",
+          "requiredAction": "change-deadline",
+          "objective": "Missed milestone: complete the change deadline control before closing this work."
+        },
+        {
+          "id": "project-management-family-4",
+          "name": "Unowned task",
+          "requiredAction": "assign-task",
+          "objective": "Unowned task: complete the assign task control before closing this work."
+        },
+        {
+          "id": "project-management-family-5",
+          "name": "Release readiness",
+          "requiredAction": "complete-task",
+          "objective": "Release readiness: complete the complete task control before closing this work."
+        },
+        {
+          "id": "project-management-family-6",
+          "name": "Parallel work",
+          "requiredAction": "move-task",
+          "objective": "Parallel work: complete the move task control before closing this work."
+        },
+        {
+          "id": "project-management-family-7",
+          "name": "Critical path",
+          "requiredAction": "add-dependency",
+          "objective": "Critical path: complete the add dependency control before closing this work."
+        }
+      ],
+      "evaluatorType": "project-management-evidence-and-state-validator",
+      "finishAction": "release-milestone",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "assign-task",
+        "move-task",
+        "complete-task",
+        "release-milestone"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "prioritization",
+      "uniqueInteractionType": "urgency-impact-queue-dispatch",
+      "primaryUIComponent": "PriorityQueue",
+      "actionTypes": [
+        "move-priority",
+        "defer-task",
+        "delegate-task",
+        "inspect-dependency",
+        "mark-urgent",
+        "reserve-buffer",
+        "dispatch-queue"
+      ],
+      "stateMachineType": "priority-dependency-scheduler",
+      "scenarioFamilies": [
+        {
+          "id": "prioritization-family-0",
+          "name": "Conflicting deadlines",
+          "requiredAction": "move-priority",
+          "objective": "Conflicting deadlines: complete the move priority control before closing this work."
+        },
+        {
+          "id": "prioritization-family-1",
+          "name": "Low impact interruption",
+          "requiredAction": "defer-task",
+          "objective": "Low impact interruption: complete the defer task control before closing this work."
+        },
+        {
+          "id": "prioritization-family-2",
+          "name": "Manager escalation",
+          "requiredAction": "mark-urgent",
+          "objective": "Manager escalation: complete the mark urgent control before closing this work."
+        },
+        {
+          "id": "prioritization-family-3",
+          "name": "Blocked work",
+          "requiredAction": "inspect-dependency",
+          "objective": "Blocked work: complete the inspect dependency control before closing this work."
+        },
+        {
+          "id": "prioritization-family-4",
+          "name": "Specialist handoff",
+          "requiredAction": "delegate-task",
+          "objective": "Specialist handoff: complete the delegate task control before closing this work."
+        },
+        {
+          "id": "prioritization-family-5",
+          "name": "Capacity overload",
+          "requiredAction": "reserve-buffer",
+          "objective": "Capacity overload: complete the reserve buffer control before closing this work."
+        },
+        {
+          "id": "prioritization-family-6",
+          "name": "Customer deadline",
+          "requiredAction": "mark-urgent",
+          "objective": "Customer deadline: complete the mark urgent control before closing this work."
+        },
+        {
+          "id": "prioritization-family-7",
+          "name": "Dependency chain",
+          "requiredAction": "inspect-dependency",
+          "objective": "Dependency chain: complete the inspect dependency control before closing this work."
+        }
+      ],
+      "evaluatorType": "prioritization-evidence-and-state-validator",
+      "finishAction": "dispatch-queue",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "inspect-dependency",
+        "reserve-buffer",
+        "mark-urgent",
+        "dispatch-queue"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "communication",
+      "uniqueInteractionType": "channel-audience-and-message-composition",
+      "primaryUIComponent": "TeamMessenger",
+      "actionTypes": [
+        "select-channel",
+        "add-fact",
+        "choose-tone",
+        "choose-request",
+        "tag-owner",
+        "private-thread",
+        "escalate-chat",
+        "send-update"
+      ],
+      "stateMachineType": "message-escalation-protocol",
+      "scenarioFamilies": [
+        {
+          "id": "communication-family-0",
+          "name": "Sensitive update",
+          "requiredAction": "private-thread",
+          "objective": "Sensitive update: complete the private thread control before closing this work."
+        },
+        {
+          "id": "communication-family-1",
+          "name": "Manager status",
+          "requiredAction": "add-fact",
+          "objective": "Manager status: complete the add fact control before closing this work."
+        },
+        {
+          "id": "communication-family-2",
+          "name": "Cross-team handoff",
+          "requiredAction": "tag-owner",
+          "objective": "Cross-team handoff: complete the tag owner control before closing this work."
+        },
+        {
+          "id": "communication-family-3",
+          "name": "Escalating risk",
+          "requiredAction": "escalate-chat",
+          "objective": "Escalating risk: complete the escalate chat control before closing this work."
+        },
+        {
+          "id": "communication-family-4",
+          "name": "Customer-facing tone",
+          "requiredAction": "choose-tone",
+          "objective": "Customer-facing tone: complete the choose tone control before closing this work."
+        },
+        {
+          "id": "communication-family-5",
+          "name": "Decision request",
+          "requiredAction": "choose-request",
+          "objective": "Decision request: complete the choose request control before closing this work."
+        },
+        {
+          "id": "communication-family-6",
+          "name": "Wrong channel",
+          "requiredAction": "select-channel",
+          "objective": "Wrong channel: complete the select channel control before closing this work."
+        },
+        {
+          "id": "communication-family-7",
+          "name": "Missing evidence",
+          "requiredAction": "add-fact",
+          "objective": "Missing evidence: complete the add fact control before closing this work."
+        }
+      ],
+      "evaluatorType": "communication-evidence-and-state-validator",
+      "finishAction": "send-update",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "select-channel",
+        "add-fact",
+        "choose-tone",
+        "choose-request",
+        "tag-owner",
+        "send-update"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "negotiation",
+      "uniqueInteractionType": "counteroffer-concession-budget",
+      "primaryUIComponent": "BargainingTable",
+      "actionTypes": [
+        "set-offer",
+        "set-delivery",
+        "offer-package",
+        "counter-price",
+        "trade-volume",
+        "walk-away",
+        "accept-counter",
+        "sign-agreement"
+      ],
+      "stateMachineType": "bilateral-bargaining-rounds",
+      "scenarioFamilies": [
+        {
+          "id": "negotiation-family-0",
+          "name": "Price ceiling",
+          "requiredAction": "counter-price",
+          "objective": "Price ceiling: complete the counter price control before closing this work."
+        },
+        {
+          "id": "negotiation-family-1",
+          "name": "Rush delivery",
+          "requiredAction": "set-delivery",
+          "objective": "Rush delivery: complete the set delivery control before closing this work."
+        },
+        {
+          "id": "negotiation-family-2",
+          "name": "Volume discount",
+          "requiredAction": "trade-volume",
+          "objective": "Volume discount: complete the trade volume control before closing this work."
+        },
+        {
+          "id": "negotiation-family-3",
+          "name": "Unacceptable terms",
+          "requiredAction": "walk-away",
+          "objective": "Unacceptable terms: complete the walk away control before closing this work."
+        },
+        {
+          "id": "negotiation-family-4",
+          "name": "Contract renewal",
+          "requiredAction": "offer-package",
+          "objective": "Contract renewal: complete the offer package control before closing this work."
+        },
+        {
+          "id": "negotiation-family-5",
+          "name": "Supplier counter",
+          "requiredAction": "accept-counter",
+          "objective": "Supplier counter: complete the accept counter control before closing this work."
+        },
+        {
+          "id": "negotiation-family-6",
+          "name": "Mixed concession",
+          "requiredAction": "set-offer",
+          "objective": "Mixed concession: complete the set offer control before closing this work."
+        },
+        {
+          "id": "negotiation-family-7",
+          "name": "Delivery compromise",
+          "requiredAction": "counter-price",
+          "objective": "Delivery compromise: complete the counter price control before closing this work."
+        }
+      ],
+      "evaluatorType": "negotiation-evidence-and-state-validator",
+      "finishAction": "sign-agreement",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "set-delivery",
+        "set-offer",
+        "offer-package",
+        "sign-agreement"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "sales",
+      "uniqueInteractionType": "lead-qualification-quote-order-pipeline",
+      "primaryUIComponent": "SalesPipeline",
+      "actionTypes": [
+        "qualify-lead",
+        "capture-volume",
+        "select-product",
+        "check-stock",
+        "set-discount",
+        "build-quote",
+        "send-quote",
+        "log-objection",
+        "sales-followup",
+        "book-order"
+      ],
+      "stateMachineType": "opportunity-stage-gates",
+      "scenarioFamilies": [
+        {
+          "id": "sales-family-0",
+          "name": "New inbound lead",
+          "requiredAction": "qualify-lead",
+          "objective": "New inbound lead: complete the qualify lead control before closing this work."
+        },
+        {
+          "id": "sales-family-1",
+          "name": "Volume inquiry",
+          "requiredAction": "capture-volume",
+          "objective": "Volume inquiry: complete the capture volume control before closing this work."
+        },
+        {
+          "id": "sales-family-2",
+          "name": "Price objection",
+          "requiredAction": "log-objection",
+          "objective": "Price objection: complete the log objection control before closing this work."
+        },
+        {
+          "id": "sales-family-3",
+          "name": "Out-of-stock order",
+          "requiredAction": "check-stock",
+          "objective": "Out-of-stock order: complete the check stock control before closing this work."
+        },
+        {
+          "id": "sales-family-4",
+          "name": "Renewal",
+          "requiredAction": "sales-followup",
+          "objective": "Renewal: complete the sales followup control before closing this work."
+        },
+        {
+          "id": "sales-family-5",
+          "name": "Discount request",
+          "requiredAction": "set-discount",
+          "objective": "Discount request: complete the set discount control before closing this work."
+        },
+        {
+          "id": "sales-family-6",
+          "name": "Product mismatch",
+          "requiredAction": "select-product",
+          "objective": "Product mismatch: complete the select product control before closing this work."
+        },
+        {
+          "id": "sales-family-7",
+          "name": "Quote approval",
+          "requiredAction": "build-quote",
+          "objective": "Quote approval: complete the build quote control before closing this work."
+        }
+      ],
+      "evaluatorType": "sales-evidence-and-state-validator",
+      "finishAction": "book-order",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "qualify-lead",
+        "select-product",
+        "capture-volume",
+        "check-stock",
+        "build-quote",
+        "send-quote",
+        "sales-followup",
+        "book-order"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "quality-control",
+      "uniqueInteractionType": "record-diff-defect-disposition",
+      "primaryUIComponent": "QualityBench",
+      "actionTypes": [
+        "inspect-row",
+        "flag-defect",
+        "mark-duplicate",
+        "correct-value",
+        "complete-field",
+        "standardize-format",
+        "reinspect",
+        "release-batch",
+        "classify-defect",
+        "send-correction"
+      ],
+      "stateMachineType": "inspection-repair-reinspection",
+      "scenarioFamilies": [
+        {
+          "id": "quality-control-family-0",
+          "name": "Value mismatch",
+          "requiredAction": "correct-value",
+          "objective": "Value mismatch: complete the correct value control before closing this work."
+        },
+        {
+          "id": "quality-control-family-1",
+          "name": "Missing field",
+          "requiredAction": "complete-field",
+          "objective": "Missing field: complete the complete field control before closing this work."
+        },
+        {
+          "id": "quality-control-family-2",
+          "name": "Duplicate entry",
+          "requiredAction": "mark-duplicate",
+          "objective": "Duplicate entry: complete the mark duplicate control before closing this work."
+        },
+        {
+          "id": "quality-control-family-3",
+          "name": "Formatting drift",
+          "requiredAction": "standardize-format",
+          "objective": "Formatting drift: complete the standardize format control before closing this work."
+        },
+        {
+          "id": "quality-control-family-4",
+          "name": "Wrong reference",
+          "requiredAction": "flag-defect",
+          "objective": "Wrong reference: complete the flag defect control before closing this work."
+        },
+        {
+          "id": "quality-control-family-5",
+          "name": "Reopened defect",
+          "requiredAction": "reinspect",
+          "objective": "Reopened defect: complete the reinspect control before closing this work."
+        },
+        {
+          "id": "quality-control-family-6",
+          "name": "Mixed batch",
+          "requiredAction": "inspect-row",
+          "objective": "Mixed batch: complete the inspect row control before closing this work."
+        },
+        {
+          "id": "quality-control-family-7",
+          "name": "Sampling exception",
+          "requiredAction": "flag-defect",
+          "objective": "Sampling exception: complete the flag defect control before closing this work."
+        }
+      ],
+      "evaluatorType": "quality-control-evidence-and-state-validator",
+      "finishAction": "release-batch",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "inspect-row",
+        "correct-value",
+        "complete-field",
+        "reinspect",
+        "release-batch"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "compliance",
+      "uniqueInteractionType": "policy-path-and-evidence-controls",
+      "primaryUIComponent": "ProcedureRunner",
+      "actionTypes": [
+        "select-policy",
+        "verify-control",
+        "collect-consent",
+        "redact-record",
+        "route-authority",
+        "record-exception",
+        "approve-exception",
+        "authorize-request"
+      ],
+      "stateMachineType": "conditional-procedure-workflow",
+      "scenarioFamilies": [
+        {
+          "id": "compliance-family-0",
+          "name": "Sensitive data",
+          "requiredAction": "redact-record",
+          "objective": "Sensitive data: complete the redact record control before closing this work."
+        },
+        {
+          "id": "compliance-family-1",
+          "name": "Missing consent",
+          "requiredAction": "collect-consent",
+          "objective": "Missing consent: complete the collect consent control before closing this work."
+        },
+        {
+          "id": "compliance-family-2",
+          "name": "Purchase authority",
+          "requiredAction": "route-authority",
+          "objective": "Purchase authority: complete the route authority control before closing this work."
+        },
+        {
+          "id": "compliance-family-3",
+          "name": "Policy exception",
+          "requiredAction": "record-exception",
+          "objective": "Policy exception: complete the record exception control before closing this work."
+        },
+        {
+          "id": "compliance-family-4",
+          "name": "Emergency exception",
+          "requiredAction": "approve-exception",
+          "objective": "Emergency exception: complete the approve exception control before closing this work."
+        },
+        {
+          "id": "compliance-family-5",
+          "name": "Identity control",
+          "requiredAction": "verify-control",
+          "objective": "Identity control: complete the verify control control before closing this work."
+        },
+        {
+          "id": "compliance-family-6",
+          "name": "Wrong policy",
+          "requiredAction": "select-policy",
+          "objective": "Wrong policy: complete the select policy control before closing this work."
+        },
+        {
+          "id": "compliance-family-7",
+          "name": "Records retention",
+          "requiredAction": "verify-control",
+          "objective": "Records retention: complete the verify control control before closing this work."
+        }
+      ],
+      "evaluatorType": "compliance-evidence-and-state-validator",
+      "finishAction": "authorize-request",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "select-policy",
+        "verify-control",
+        "collect-consent",
+        "redact-record",
+        "route-authority",
+        "authorize-request"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "incidents",
+      "uniqueInteractionType": "incident-severity-containment-recovery",
+      "primaryUIComponent": "IncidentCommand",
+      "actionTypes": [
+        "declare-severity",
+        "contain-incident",
+        "assign-responder",
+        "notify-stakeholders",
+        "restore-service",
+        "verify-recovery",
+        "rollback-change",
+        "send-status",
+        "close-incident"
+      ],
+      "stateMachineType": "incident-command-lifecycle",
+      "scenarioFamilies": [
+        {
+          "id": "incidents-family-0",
+          "name": "Service outage",
+          "requiredAction": "restore-service",
+          "objective": "Service outage: complete the restore service control before closing this work."
+        },
+        {
+          "id": "incidents-family-1",
+          "name": "Wrong shipment",
+          "requiredAction": "contain-incident",
+          "objective": "Wrong shipment: complete the contain incident control before closing this work."
+        },
+        {
+          "id": "incidents-family-2",
+          "name": "Missing employee",
+          "requiredAction": "assign-responder",
+          "objective": "Missing employee: complete the assign responder control before closing this work."
+        },
+        {
+          "id": "incidents-family-3",
+          "name": "Invoice failure",
+          "requiredAction": "notify-stakeholders",
+          "objective": "Invoice failure: complete the notify stakeholders control before closing this work."
+        },
+        {
+          "id": "incidents-family-4",
+          "name": "Bad deployment",
+          "requiredAction": "rollback-change",
+          "objective": "Bad deployment: complete the rollback change control before closing this work."
+        },
+        {
+          "id": "incidents-family-5",
+          "name": "Customer escalation",
+          "requiredAction": "send-status",
+          "objective": "Customer escalation: complete the send status control before closing this work."
+        },
+        {
+          "id": "incidents-family-6",
+          "name": "Missing document",
+          "requiredAction": "verify-recovery",
+          "objective": "Missing document: complete the verify recovery control before closing this work."
+        },
+        {
+          "id": "incidents-family-7",
+          "name": "Scheduling collapse",
+          "requiredAction": "declare-severity",
+          "objective": "Scheduling collapse: complete the declare severity control before closing this work."
+        }
+      ],
+      "evaluatorType": "incidents-evidence-and-state-validator",
+      "finishAction": "close-incident",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "declare-severity",
+        "assign-responder",
+        "notify-stakeholders",
+        "contain-incident",
+        "restore-service",
+        "verify-recovery",
+        "close-incident"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "administration",
+      "uniqueInteractionType": "metadata-validation-and-routing",
+      "primaryUIComponent": "RecordsOffice",
+      "actionTypes": [
+        "scan-record",
+        "set-reference",
+        "set-department",
+        "set-retention",
+        "verify-signature",
+        "route-record",
+        "return-record",
+        "file-record"
+      ],
+      "stateMachineType": "document-intake-filing-chain",
+      "scenarioFamilies": [
+        {
+          "id": "administration-family-0",
+          "name": "Unsigned form",
+          "requiredAction": "verify-signature",
+          "objective": "Unsigned form: complete the verify signature control before closing this work."
+        },
+        {
+          "id": "administration-family-1",
+          "name": "Wrong department",
+          "requiredAction": "set-department",
+          "objective": "Wrong department: complete the set department control before closing this work."
+        },
+        {
+          "id": "administration-family-2",
+          "name": "Retention review",
+          "requiredAction": "set-retention",
+          "objective": "Retention review: complete the set retention control before closing this work."
+        },
+        {
+          "id": "administration-family-3",
+          "name": "Missing reference",
+          "requiredAction": "set-reference",
+          "objective": "Missing reference: complete the set reference control before closing this work."
+        },
+        {
+          "id": "administration-family-4",
+          "name": "Duplicate filing",
+          "requiredAction": "return-record",
+          "objective": "Duplicate filing: complete the return record control before closing this work."
+        },
+        {
+          "id": "administration-family-5",
+          "name": "Urgent routing",
+          "requiredAction": "route-record",
+          "objective": "Urgent routing: complete the route record control before closing this work."
+        },
+        {
+          "id": "administration-family-6",
+          "name": "Delivery receipt",
+          "requiredAction": "scan-record",
+          "objective": "Delivery receipt: complete the scan record control before closing this work."
+        },
+        {
+          "id": "administration-family-7",
+          "name": "Archive intake",
+          "requiredAction": "set-retention",
+          "objective": "Archive intake: complete the set retention control before closing this work."
+        }
+      ],
+      "evaluatorType": "administration-evidence-and-state-validator",
+      "finishAction": "file-record",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "scan-record",
+        "set-reference",
+        "set-department",
+        "set-retention",
+        "route-record",
+        "file-record"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "reporting",
+      "uniqueInteractionType": "metric-section-report-composition",
+      "primaryUIComponent": "ReportBuilder",
+      "actionTypes": [
+        "select-dataset",
+        "toggle-metric",
+        "toggle-section",
+        "choose-comparison",
+        "add-conclusion",
+        "validate-report",
+        "select-recipient",
+        "distribute-report",
+        "set-period",
+        "set-visual"
+      ],
+      "stateMachineType": "report-data-validation-distribution",
+      "scenarioFamilies": [
+        {
+          "id": "reporting-family-0",
+          "name": "Weekly operations",
+          "requiredAction": "toggle-metric",
+          "objective": "Weekly operations: complete the toggle metric control before closing this work."
+        },
+        {
+          "id": "reporting-family-1",
+          "name": "Variance commentary",
+          "requiredAction": "choose-comparison",
+          "objective": "Variance commentary: complete the choose comparison control before closing this work."
+        },
+        {
+          "id": "reporting-family-2",
+          "name": "Executive summary",
+          "requiredAction": "toggle-section",
+          "objective": "Executive summary: complete the toggle section control before closing this work."
+        },
+        {
+          "id": "reporting-family-3",
+          "name": "Audience mismatch",
+          "requiredAction": "select-recipient",
+          "objective": "Audience mismatch: complete the select recipient control before closing this work."
+        },
+        {
+          "id": "reporting-family-4",
+          "name": "Incorrect denominator",
+          "requiredAction": "validate-report",
+          "objective": "Incorrect denominator: complete the validate report control before closing this work."
+        },
+        {
+          "id": "reporting-family-5",
+          "name": "Missing recommendation",
+          "requiredAction": "add-conclusion",
+          "objective": "Missing recommendation: complete the add conclusion control before closing this work."
+        },
+        {
+          "id": "reporting-family-6",
+          "name": "Finance handover",
+          "requiredAction": "select-dataset",
+          "objective": "Finance handover: complete the select dataset control before closing this work."
+        },
+        {
+          "id": "reporting-family-7",
+          "name": "Service report",
+          "requiredAction": "choose-comparison",
+          "objective": "Service report: complete the choose comparison control before closing this work."
+        }
+      ],
+      "evaluatorType": "reporting-evidence-and-state-validator",
+      "finishAction": "distribute-report",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "select-dataset",
+        "toggle-metric",
+        "toggle-section",
+        "add-conclusion",
+        "validate-report",
+        "select-recipient",
+        "distribute-report"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "presentations",
+      "uniqueInteractionType": "slide-sequencing-audience-response",
+      "primaryUIComponent": "PresentationStudio",
+      "actionTypes": [
+        "add-slide",
+        "choose-slide-content",
+        "reorder-slide",
+        "add-chart",
+        "add-speaker-note",
+        "start-presentation",
+        "next-slide",
+        "answer-audience",
+        "finish-presentation",
+        "select-slide",
+        "remove-slide",
+        "edit-slide",
+        "slide-layout"
+      ],
+      "stateMachineType": "deck-rehearsal-question-cycle",
+      "scenarioFamilies": [
+        {
+          "id": "presentations-family-0",
+          "name": "Board briefing",
+          "requiredAction": "add-chart",
+          "objective": "Board briefing: complete the add chart control before closing this work."
+        },
+        {
+          "id": "presentations-family-1",
+          "name": "Customer pitch",
+          "requiredAction": "choose-slide-content",
+          "objective": "Customer pitch: complete the choose slide content control before closing this work."
+        },
+        {
+          "id": "presentations-family-2",
+          "name": "Risk review",
+          "requiredAction": "add-speaker-note",
+          "objective": "Risk review: complete the add speaker note control before closing this work."
+        },
+        {
+          "id": "presentations-family-3",
+          "name": "Data question",
+          "requiredAction": "answer-audience",
+          "objective": "Data question: complete the answer audience control before closing this work."
+        },
+        {
+          "id": "presentations-family-4",
+          "name": "Short time slot",
+          "requiredAction": "reorder-slide",
+          "objective": "Short time slot: complete the reorder slide control before closing this work."
+        },
+        {
+          "id": "presentations-family-5",
+          "name": "Executive handover",
+          "requiredAction": "start-presentation",
+          "objective": "Executive handover: complete the start presentation control before closing this work."
+        },
+        {
+          "id": "presentations-family-6",
+          "name": "Project update",
+          "requiredAction": "next-slide",
+          "objective": "Project update: complete the next slide control before closing this work."
+        },
+        {
+          "id": "presentations-family-7",
+          "name": "Recommendation challenge",
+          "requiredAction": "answer-audience",
+          "objective": "Recommendation challenge: complete the answer audience control before closing this work."
+        }
+      ],
+      "evaluatorType": "presentations-evidence-and-state-validator",
+      "finishAction": "finish-presentation",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "add-slide",
+        "choose-slide-content",
+        "add-chart",
+        "add-speaker-note",
+        "start-presentation",
+        "next-slide",
+        "answer-audience",
+        "finish-presentation"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "operations",
+      "uniqueInteractionType": "queue-staffing-throughput-simulation",
+      "primaryUIComponent": "OperationsControl",
+      "actionTypes": [
+        "allocate-staff",
+        "process-queues",
+        "reroute-demand",
+        "overtime",
+        "triage-queue",
+        "cross-train",
+        "service-recovery",
+        "close-operation"
+      ],
+      "stateMachineType": "discrete-service-tick",
+      "scenarioFamilies": [
+        {
+          "id": "operations-family-0",
+          "name": "Demand surge",
+          "requiredAction": "reroute-demand",
+          "objective": "Demand surge: complete the reroute demand control before closing this work."
+        },
+        {
+          "id": "operations-family-1",
+          "name": "Absent worker",
+          "requiredAction": "cross-train",
+          "objective": "Absent worker: complete the cross train control before closing this work."
+        },
+        {
+          "id": "operations-family-2",
+          "name": "Priority queue",
+          "requiredAction": "triage-queue",
+          "objective": "Priority queue: complete the triage queue control before closing this work."
+        },
+        {
+          "id": "operations-family-3",
+          "name": "Service breach",
+          "requiredAction": "service-recovery",
+          "objective": "Service breach: complete the service recovery control before closing this work."
+        },
+        {
+          "id": "operations-family-4",
+          "name": "Overloaded capacity",
+          "requiredAction": "overtime",
+          "objective": "Overloaded capacity: complete the overtime control before closing this work."
+        },
+        {
+          "id": "operations-family-5",
+          "name": "Uneven utilization",
+          "requiredAction": "allocate-staff",
+          "objective": "Uneven utilization: complete the allocate staff control before closing this work."
+        },
+        {
+          "id": "operations-family-6",
+          "name": "Backlog clearance",
+          "requiredAction": "process-queues",
+          "objective": "Backlog clearance: complete the process queues control before closing this work."
+        },
+        {
+          "id": "operations-family-7",
+          "name": "Resource outage",
+          "requiredAction": "cross-train",
+          "objective": "Resource outage: complete the cross train control before closing this work."
+        }
+      ],
+      "evaluatorType": "operations-evidence-and-state-validator",
+      "finishAction": "close-operation",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "allocate-staff",
+        "process-queues",
+        "close-operation"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "decisions",
+      "uniqueInteractionType": "weighted-investment-risk-portfolio",
+      "primaryUIComponent": "DecisionRoom",
+      "actionTypes": [
+        "inspect-option",
+        "set-risk-weight",
+        "compare-return",
+        "stress-test",
+        "choose-investment",
+        "mitigate-risk",
+        "request-board-review",
+        "commit-decision"
+      ],
+      "stateMachineType": "case-comparison-commitment",
+      "scenarioFamilies": [
+        {
+          "id": "decisions-family-0",
+          "name": "Capital allocation",
+          "requiredAction": "compare-return",
+          "objective": "Capital allocation: complete the compare return control before closing this work."
+        },
+        {
+          "id": "decisions-family-1",
+          "name": "Demand uncertainty",
+          "requiredAction": "stress-test",
+          "objective": "Demand uncertainty: complete the stress test control before closing this work."
+        },
+        {
+          "id": "decisions-family-2",
+          "name": "Risk appetite",
+          "requiredAction": "set-risk-weight",
+          "objective": "Risk appetite: complete the set risk weight control before closing this work."
+        },
+        {
+          "id": "decisions-family-3",
+          "name": "Budget ceiling",
+          "requiredAction": "inspect-option",
+          "objective": "Budget ceiling: complete the inspect option control before closing this work."
+        },
+        {
+          "id": "decisions-family-4",
+          "name": "Strategic investment",
+          "requiredAction": "request-board-review",
+          "objective": "Strategic investment: complete the request board review control before closing this work."
+        },
+        {
+          "id": "decisions-family-5",
+          "name": "Operational tradeoff",
+          "requiredAction": "mitigate-risk",
+          "objective": "Operational tradeoff: complete the mitigate risk control before closing this work."
+        },
+        {
+          "id": "decisions-family-6",
+          "name": "Supplier dependency",
+          "requiredAction": "stress-test",
+          "objective": "Supplier dependency: complete the stress test control before closing this work."
+        },
+        {
+          "id": "decisions-family-7",
+          "name": "Growth option",
+          "requiredAction": "choose-investment",
+          "objective": "Growth option: complete the choose investment control before closing this work."
+        }
+      ],
+      "evaluatorType": "decisions-evidence-and-state-validator",
+      "finishAction": "commit-decision",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "inspect-option",
+        "compare-return",
+        "choose-investment",
+        "mitigate-risk",
+        "commit-decision"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "time-management",
+      "uniqueInteractionType": "interruptible-work-and-delegation",
+      "primaryUIComponent": "FocusClock",
+      "actionTypes": [
+        "work-now",
+        "advance-focus",
+        "defer-work",
+        "delegate-work",
+        "interrupt-work",
+        "ignore-interruption",
+        "reschedule-work",
+        "take-break",
+        "escalate-load",
+        "finish-block"
+      ],
+      "stateMachineType": "preemptive-workday-scheduler",
+      "scenarioFamilies": [
+        {
+          "id": "time-management-family-0",
+          "name": "Incoming interruption",
+          "requiredAction": "interrupt-work",
+          "objective": "Incoming interruption: complete the interrupt work control before closing this work."
+        },
+        {
+          "id": "time-management-family-1",
+          "name": "Deep work",
+          "requiredAction": "ignore-interruption",
+          "objective": "Deep work: complete the ignore interruption control before closing this work."
+        },
+        {
+          "id": "time-management-family-2",
+          "name": "Overloaded day",
+          "requiredAction": "delegate-work",
+          "objective": "Overloaded day: complete the delegate work control before closing this work."
+        },
+        {
+          "id": "time-management-family-3",
+          "name": "Deadline conflict",
+          "requiredAction": "reschedule-work",
+          "objective": "Deadline conflict: complete the reschedule work control before closing this work."
+        },
+        {
+          "id": "time-management-family-4",
+          "name": "Energy slump",
+          "requiredAction": "take-break",
+          "objective": "Energy slump: complete the take break control before closing this work."
+        },
+        {
+          "id": "time-management-family-5",
+          "name": "Unrealistic request",
+          "requiredAction": "escalate-load",
+          "objective": "Unrealistic request: complete the escalate load control before closing this work."
+        },
+        {
+          "id": "time-management-family-6",
+          "name": "Low value work",
+          "requiredAction": "defer-work",
+          "objective": "Low value work: complete the defer work control before closing this work."
+        },
+        {
+          "id": "time-management-family-7",
+          "name": "Urgent customer",
+          "requiredAction": "work-now",
+          "objective": "Urgent customer: complete the work now control before closing this work."
+        }
+      ],
+      "evaluatorType": "time-management-evidence-and-state-validator",
+      "finishAction": "finish-block",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "work-now",
+        "advance-focus",
+        "interrupt-work",
+        "take-break",
+        "finish-block"
+      ],
+      "validatedScenarios": 300
+    },
+    {
+      "id": "workday",
+      "uniqueInteractionType": "multi-application-shift-orchestration",
+      "primaryUIComponent": "WorkdayDesktop",
+      "actionTypes": [
+        "launch-shift",
+        "open-work-app",
+        "advance-shift",
+        "triage-interruption",
+        "lunch-break",
+        "manager-checkin",
+        "review-shift",
+        "close-shift"
+      ],
+      "stateMachineType": "event-driven-company-shift",
+      "scenarioFamilies": [
+        {
+          "id": "workday-family-0",
+          "name": "Customer-heavy day",
+          "requiredAction": "triage-interruption",
+          "objective": "Customer-heavy day: complete the triage interruption control before closing this work."
+        },
+        {
+          "id": "workday-family-1",
+          "name": "Financial close",
+          "requiredAction": "manager-checkin",
+          "objective": "Financial close: complete the manager checkin control before closing this work."
+        },
+        {
+          "id": "workday-family-2",
+          "name": "Project launch",
+          "requiredAction": "open-work-app",
+          "objective": "Project launch: complete the open work app control before closing this work."
+        },
+        {
+          "id": "workday-family-3",
+          "name": "Staff absence",
+          "requiredAction": "triage-interruption",
+          "objective": "Staff absence: complete the triage interruption control before closing this work."
+        },
+        {
+          "id": "workday-family-4",
+          "name": "Audit day",
+          "requiredAction": "review-shift",
+          "objective": "Audit day: complete the review shift control before closing this work."
+        },
+        {
+          "id": "workday-family-5",
+          "name": "Supplier disruption",
+          "requiredAction": "manager-checkin",
+          "objective": "Supplier disruption: complete the manager checkin control before closing this work."
+        },
+        {
+          "id": "workday-family-6",
+          "name": "Peak demand",
+          "requiredAction": "lunch-break",
+          "objective": "Peak demand: complete the lunch break control before closing this work."
+        },
+        {
+          "id": "workday-family-7",
+          "name": "Independent shift",
+          "requiredAction": "advance-shift",
+          "objective": "Independent shift: complete the advance shift control before closing this work."
+        }
+      ],
+      "evaluatorType": "workday-evidence-and-state-validator",
+      "finishAction": "close-shift",
+      "route": true,
+      "UI": true,
+      "scenarioGenerator": true,
+      "interactionHandler": true,
+      "evaluator": true,
+      "persistence": true,
+      "tests": true,
+      "exercisedActions": [
+        "launch-shift",
+        "open-message",
+        "reply",
+        "clarify",
+        "attach",
+        "add-task",
+        "follow-up",
+        "send-mail",
+        "archive-thread",
+        "compare-baseline",
+        "simulate-market",
+        "set-price",
+        "publish-price",
+        "inspect-source",
+        "collect-source",
+        "compare-sources",
+        "select-finding",
+        "publish-finding",
+        "add-section",
+        "insert-reference",
+        "choose-audience",
+        "set-classification",
+        "edit-section",
+        "save-version",
+        "review-document",
+        "issue-document",
+        "receive-stock",
+        "mark-damaged",
+        "transfer-stock",
+        "count-stock",
+        "investigate-stock",
+        "adjust-stock",
+        "reorder-stock",
+        "close-count",
+        "inspect-dependency",
+        "reserve-buffer",
+        "mark-urgent",
+        "dispatch-queue",
+        "inspect-row",
+        "correct-value",
+        "complete-field",
+        "reinspect",
+        "release-batch",
+        "scan-record",
+        "set-reference",
+        "set-department",
+        "set-retention",
+        "route-record",
+        "file-record",
+        "select-dataset",
+        "toggle-metric",
+        "toggle-section",
+        "add-conclusion",
+        "validate-report",
+        "select-recipient",
+        "distribute-report",
+        "advance-shift",
+        "manager-checkin",
+        "review-shift",
+        "close-shift"
+      ],
+      "validatedScenarios": 300
+    }
+  ]
+}

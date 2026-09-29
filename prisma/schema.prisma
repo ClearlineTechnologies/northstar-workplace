@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+model Workplace {
+  id String @id
+  revision Int @default(0)
+  state String
+  updatedAt DateTime @updatedAt
+  actions ActionLog[]
+}
+model ActionLog {
+  id String @id @default(cuid())
+  workplaceId String
+  workplace Workplace @relation(fields: [workplaceId], references: [id], onDelete: Cascade)
+  command String
+  createdAt DateTime @default(now())
+  @@index([workplaceId, createdAt])
+}

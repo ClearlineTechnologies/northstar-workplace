@@ -1,0 +1,56 @@
+{
+  "name": "workcraft-apprenticeship",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "tsx --tsconfig tsconfig.runtime.json scripts/audit.tsx && next build",
+    "start": "next start --hostname 127.0.0.1",
+    "db:init": "node scripts/init-db.mjs",
+    "db:seed": "tsx src/database/seed.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src scripts",
+    "test": "tsx --test src/tests/*.test.ts",
+    "audit:features": "tsx --tsconfig tsconfig.runtime.json scripts/audit.tsx",
+    "test:e2e": "playwright test",
+    "postinstall": "prisma generate",
+    "format": "prettier --write src scripts *.json *.ts *.mjs README.md"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.0",
+    "lucide-react": "^0.468.0",
+    "next": "^15.5.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "npm": "^12.1.0",
+    "postcss": "^8.5.23",
+    "prettier": "^3.9.9",
+    "prisma": "6.19.0",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.18.0"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "effect": "^3.20.0",
+    "deepmerge-ts": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=22.22.2"
+  },
+  "allowScripts": {
+    "@prisma/client": true,
+    "@prisma/engines": true,
+    "esbuild": true,
+    "prisma": true
+  }
+}
